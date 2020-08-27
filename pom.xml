@@ -32,7 +32,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-						<username>nnhoang</username>
+						<username>nnhoang820</username>
 						<password>CMCts@2020</password>
 						<environment>Sandbox</environment>
 						<workers>1</workers>
