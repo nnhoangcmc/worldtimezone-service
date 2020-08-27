@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="853f0e07-8f87-4f66-b089-a937085df888" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="worldtimezone-serviceFlow" doc:id="73055fc8-cddc-46e1-8b8f-3f1d2e3724cf" >
+		<http:listener doc:name="Listener" doc:id="a58831c3-cc98-4c25-9a0e-62201a6351d1" config-ref="HTTP_Listener_config" path="timezone/{region}/{city}"/>
+		<logger level="INFO" doc:name="Logger" doc:id="f6029fb6-bf20-4985-ade6-0772eb7ed6bf" message='"Log"'/>
+	</flow>
+</mule>
